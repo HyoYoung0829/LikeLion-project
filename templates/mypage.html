@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <link rel="stylesheet" media="screen and (max-width:1440px)" href="/css/Mypage/Mypage_1440.css">
+    <link rel="stylesheet" media="screen and (min-width:1441px) and (max-width:1920px)" href="/css/Mypage/Mypage_1920.css">
+    <link rel="stylesheet" media="screen and (min-width:1921px) and (max-width:2560px)" href="/css/Mypage/Mypage_2560.css">
+    <title>H.I. bar - My Page</title>
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="headerbox1">
+                <input type="checkbox" id="menuicon">
+                    <label for="menuicon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                    <div class="sidebar">
+                        <input type="button" class="side_fun1" value="🧊냉장고 파먹기?" onclick="location='/templates/function1.html'"/>                    
+                        <input type="button" class="side_fun2" value="🍸오늘 뭐먹지?" onclick="location='/templates/Today.html'"/>
+                        <input type="button" class="side_fun3" value="🥴알쓰 드루와" onclick="location='/templates/Lightweight.html'"/>
+                        <input type="button" class="side_fun4" value="🙌유저 게시판" onclick="location='/templates/Board.html'"/>
+                    </div>
+            </div>
+            <div class="headerbox">
+                <div><button type="button" id="logo_btn" value="logo" onclick="location='/templates/index.html'"><img src="/photo/nav_logo.png" alt="로고"></button></div>
+            </div>
+            <div class="headerbox">
+                <div class="menu1"><input type="button" id="search_btn" value="Search" onclick="location='/templates/SearchPage.html'"/></div>
+                <div class="menu2"><input type="button" id="login_btn" value="Login" onclick="login_and_logout()"/></div>
+                <div class="menu3"><input type="button" id="mypage_btn" value="My page" onclick="no_login()"/></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="display_section">
+                <div class="mypage_logo">
+                    <div class="mypage_icon"></div>
+                    <div class="text">MYPAGE</div>
+                </div>
+                <div class="name_box" id="user_name" onload="change_username()">이름</div>
+                <div class="saved_recipe"><input type="button" id="saved" value="저장한 레시피" onclick="location='/templates/SaveRecipe.html'" /></div>
+                <div class="written_recipe"><input type="button" id="written" value="작성한 레시피" onclick="location='/templates/MyRecipe.html'" /></div>
+            </div>
+        </div>
+        <div class="footer"><img src="/photo/footer.png" alt="배경"></div>
+    </div>
+
+    <script src="/js/mypage.js"></script>
+    <script src="/js/index.js"></script>
+</body>
+</html>

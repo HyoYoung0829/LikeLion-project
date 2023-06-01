@@ -1,0 +1,275 @@
+/*----------------------------------------전체----------------------------------------*/
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+/*----------------------------------------전체----------------------------------------*/
+
+/*----------------------------------------전부 감싸는 div----------------------------------------*/
+.wrap {
+    width: 1920px; height: 933px;
+}
+/*----------------------------------------전부 감싸는 div----------------------------------------*/
+
+/*----------------------------------------header----------------------------------------*/
+.header {
+    width: 100%; height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 0 20px;
+    border-bottom: 4px solid #61A8C1;
+    border-top: 4px solid #61A8C1;
+}
+/*----------header내부box----------*/
+.headerbox1 {
+    width: 33%; height: 130px;
+    display: flex;
+    align-items: center;    
+    justify-content: left;
+}
+
+.headerbox {
+    width: 33%; height: 130px;
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+}
+/*----------header내부box----------*/
+
+/*----------왼쪽부터 1번 박스(사이드바)----------*/
+input[id="menuicon"] {
+    display: none;
+}
+
+input[id="menuicon"]+label {
+    display: block;
+    margin: 30px;
+    width: 40px;
+    height: 35px;
+    position: relative;
+    cursor: pointer;
+}
+
+input[id="menuicon"]+label span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    border-radius: 30px;
+    background: #000;
+    transition: all .35s;
+}
+
+input[id="menuicon"]+label span:nth-child(1) {
+    top: 0;
+}
+
+input[id="menuicon"]+label span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+input[id="menuicon"]+label span:nth-child(3) {
+    bottom: 0;
+}
+
+input[id="menuicon"]:checked+label {
+    z-index: 2;
+}
+
+input[id="menuicon"]:checked+label span {
+    background: #fff;
+}
+
+input[id="menuicon"]:checked+label span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+input[id="menuicon"]:checked+label span:nth-child(2) {
+    opacity: 0;
+}
+
+input[id="menuicon"]:checked+label span:nth-child(3) {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+}
+
+div[class="sidebar"] {
+    width: 300px;
+    height: 100%;
+    background:#000000a2;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    z-index: 1;
+    transition: all .35s;
+}
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 50px;
+
+}
+.side_fun1,.side_fun2,.side_fun3,.side_fun4{
+    /* border: 1px solid black; */
+    border: 0;
+    border-radius: 30px;
+    background-color: #00000000;
+    width: 220px;
+    height: 50px;
+    margin: 10px 60px;
+    padding: 5px;
+    color: white;
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+}
+.side_fun1:hover{
+    background-color:#0000002f;
+}
+.side_fun2:hover{
+    background-color:#0000002f;
+}
+.side_fun3:hover{
+    background-color:#0000002f;
+}
+.side_fun4:hover{
+    background-color:#0000002f;
+}
+
+input[id="menuicon"]:checked+label+div {
+    left: 0;
+}
+/*----------왼쪽부터 1번 박스(사이드바)----------*/
+
+/*----------왼쪽부터 2번 박스(로고)----------*/
+#logo_btn {
+    width: 100%; height: 115px;
+    border: none;
+    cursor: pointer;
+    background-color: #00000000;
+}
+
+#logo_btn img {
+    width: 100%; height: 115px;
+}
+/*----------왼쪽부터 2번 박스(로고)----------*/
+
+/*----------왼쪽부터 3번 박스(메뉴버튼)----------*/
+#search_btn, #login_btn, #mypage_btn {
+    width: 150px; height: 60px;
+    cursor: pointer;
+    border: 4px solid #22A3B2;
+    background-color: #00000000;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 25px;
+    margin-left: -25px;
+}
+/*----------왼쪽부터 3번 박스(메뉴버튼)----------*/
+
+/*----------------------------------------header----------------------------------------*/
+
+/*--------------------main 사이즈--------------------*/
+.container {
+    width: 100%; height: calc(100% - 330px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+/*--------------------main 사이즈--------------------*/
+
+/*--------------------footer--------------------*/
+.footer {
+    width: 100%; height: 200px;
+}
+
+.footer img {
+    width: 100%; height: 100%;
+}
+/*--------------------footer--------------------*/
+.joinForm {
+    width: 25%;
+    height:100%;
+    position: absolute;
+    top: 30%;
+    text-align:center; /*글자 중앙 정렬*/
+}
+
+.textForm {
+    height: 40px;
+    border-bottom: 2px solid #adadad;
+    margin: 0 0 30px 0;
+    padding: 5px 5px 0 15px;
+    border: 3px solid #1879A2;
+    border-radius: 20px;
+}
+  
+.name {
+    width: 100%;
+    border:none;
+    outline:none;
+    color: rgb(87, 87, 87);;
+    font-size:16px;
+    height:25px;
+    background: none;
+}
+  
+.id {
+    width: 100%;
+    border:none;
+    outline:none;
+    color: rgb(87, 87, 87);
+    font-size:16px;
+    height:25px;
+    background: none;
+}
+  
+.pw {
+    width: 100%;
+    border:none;
+    outline:none;
+    color: rgb(87, 87, 87);;
+    font-size:16px;
+    height:25px;
+    background: none;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+}
+
+.go_login_btn {
+    width:80%; height:40px;
+    background: white;
+    color: rgb(87, 87, 87);
+    border: 3px solid #1879A2;
+    border-radius: 20px;
+    cursor:pointer;
+    margin-bottom: 10px;
+}
+
+.go_signup_btn {
+    width:20%; height:40px;
+    background: white;
+    color: rgb(87, 87, 87);
+    border: 3px solid #1879A2;
+    border-radius: 20px;
+    cursor:pointer;
+    margin-left: 20px;
+}
+
+/*------------------------------중앙 섹션------------------------------*/
+/*------------------------------------------main 페이지 내부------------------------------------------*/
+
+
+
+  

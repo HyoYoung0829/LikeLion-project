@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H.I.Bar</title>
+    <link rel="stylesheet" media="screen and (max-width:1440px)" href="/css/index/index_1440.css">
+    <link rel="stylesheet" media="screen and (min-width:1441px) and (max-width:1920px)"
+        href="/css/index/index_1920.css">
+    <link rel="stylesheet" media="screen and (min-width:1921px) and (max-width:2560px)"
+        href="/css/index/index_2560.css">
+
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="headerbox1">
+                <input type="checkbox" id="menuicon">
+                <label for="menuicon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <div class="sidebar">
+                    <input type="button" class="side_fun1" value="🧊냉장고 파먹기?"
+                        onclick="location='/templates/function1.html'" />
+                    <input type="button" class="side_fun2" value="🍸오늘 뭐먹지?"
+                        onclick="location='/templates/Today.html'" />
+                    <input type="button" class="side_fun3" value="🥴알쓰 드루와"
+                        onclick="location='/templates/Lightweight.html'" />
+                    <input type="button" class="side_fun4" value="🙌유저 게시판"
+                        onclick="location='/templates/Board.html'" />
+                </div>
+            </div>
+            <div class="headerbox">
+                <div><button type="button" id="logo_btn" value="logo" onclick="location='/templates/index.html'"><img
+                            src="/photo/nav_logo.png" alt="로고"></button></div>
+            </div>
+            <div class="headerbox">
+                <div class="menu1"><input type="button" id="search_btn" value="Search"
+                        onclick="location='/templates/SearchPage.html'" /></div>
+                <div class="menu2"><input type="button" id="login_btn" value="Login" onclick="login_and_logout()" />
+                </div>
+                <div class="menu3"><input type="button" id="mypage_btn" value="My page" onclick="no_login()" /></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="function_Section">
+                <div class="fun_box">
+                    <div class="fun1"><button type="button" value="icon"
+                            onclick="location='/templates/function1.html'"></button></div>
+                    <div class="fun2"><button type="button" value="icon"
+                            onclick="location='/templates/Today.html'"></button></div>
+                    <div class="fun3"><button type="button" value="icon"
+                            onclick="location='/templates/Lightweight.html'"></button></div>
+                    <div class="fun4"><button type="button" value="icon"
+                            onclick="location='/templates/Board.html'"></button></div>
+                </div>
+                <div class="fun_img">
+                    <div class="text1">냉장고 속 칵테일</div>
+                    <div class="text2">오늘의 레시피</div>
+                    <div class="text3">알쓰를 위한 레시피</div>
+                    <div class="text4">게시판</div>
+                </div>
+            </div>
+            <div class="display_section">
+                <div class="videobox">
+                    <iframe class="video" src="https://www.youtube.com/embed/ooZpZrQY2w8?start=22"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="tile_section">
+                    <div class="tile">
+                        <div class="tiletext">
+                            <p class="text"><span class="textred">HOT</span> Recipe!</p>
+                        </div>
+                        <div class="tilebox">
+                            <div class="Rbox"></div>
+                            <div class="Rbox"></div>
+                            <div class="Rbox"></div>
+                            <div class="Rbox"></div>
+                        </div>
+                        <div class="tilebox">
+                            <div class="Rbox"></div>
+                            <div class="Rbox"></div>
+                            <div class="Rbox"></div>
+                            <div class="Rbox"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer"><img src="/photo/footer.png" alt="배경"></div>
+    </div>
+
+    <script src="/js/index.js"></script>
+</body>
+
+</html>

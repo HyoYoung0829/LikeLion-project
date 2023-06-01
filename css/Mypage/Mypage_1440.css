@@ -1,0 +1,279 @@
+/*--------------------전체--------------------*/
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+/*--------------------전체--------------------*/
+
+/*--------------------전부 감싸는 div--------------------*/
+.wrap {
+    width: 1440px; height: 785px;
+}
+/*--------------------전부 감싸는 div--------------------*/
+
+/*--------------------header--------------------*/
+.header {
+    width: 100%; height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 0 20px;
+    border-bottom: 4px solid #61A8C1;
+    border-top: 4px solid #61A8C1;
+}
+/*--------------------header내부box--------------------*/
+.headerbox1 {
+    width: 33%; height: 100px;
+    display: flex;
+    align-items: center;    
+    justify-content: left;
+}
+
+.headerbox {
+    width: 33%; height: 100px;
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+}
+/*--------------------header내부box--------------------*/
+
+/*--------------------왼쪽부터 1번 박스(사이드바)--------------------*/
+input[id="menuicon"] {
+    display: none;
+}
+
+input[id="menuicon"]+label {
+    display: block;
+    margin: 30px;
+    width: 30px;
+    height: 25px;
+    position: relative;
+    cursor: pointer;
+}
+
+input[id="menuicon"]+label span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    border-radius: 30px;
+    background: #000;
+    transition: all .35s;
+}
+
+input[id="menuicon"]+label span:nth-child(1) {
+    top: 0;
+}
+
+input[id="menuicon"]+label span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+input[id="menuicon"]+label span:nth-child(3) {
+    bottom: 0;
+}
+
+input[id="menuicon"]:checked+label {
+    z-index: 2;
+}
+
+input[id="menuicon"]:checked+label span {
+    background: #fff;
+}
+
+input[id="menuicon"]:checked+label span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+
+input[id="menuicon"]:checked+label span:nth-child(2) {
+    opacity: 0;
+}
+
+input[id="menuicon"]:checked+label span:nth-child(3) {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+}
+
+div[class="sidebar"] {
+    width: 300px;
+    height: 100%;
+    background:#000000a2;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    z-index: 1;
+    transition: all .35s;
+}
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 50px;
+
+}
+.side_fun1,.side_fun2,.side_fun3,.side_fun4{
+    /* border: 1px solid black; */
+    border: 0;
+    border-radius: 30px;
+    background-color: #00000000;
+    width: 220px;
+    height: 50px;
+    margin: 10px 60px;
+    padding: 5px;
+    color: white;
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+}
+.side_fun1:hover{
+    background-color:#0000002f;
+}
+.side_fun2:hover{
+    background-color:#0000002f;
+}
+.side_fun3:hover{
+    background-color:#0000002f;
+}
+.side_fun4:hover{
+    background-color:#0000002f;
+}
+
+input[id="menuicon"]:checked+label+div {
+    left: 0;
+}
+/*--------------------왼쪽부터 1번 박스(사이드바)--------------------*/
+
+/*--------------------왼쪽부터 2번 박스(로고)--------------------*/
+#logo_btn {
+    width: 100%; height: 85px;
+    border: none;
+    cursor: pointer;
+    background-color: #00000000;
+}
+
+#logo_btn img {
+    width: 100%; height: 85px;
+}
+/*--------------------왼쪽부터 2번 박스(로고)--------------------*/
+
+/*--------------------왼쪽부터 3번 박스(메뉴버튼)--------------------*/
+#search_btn, #login_btn, #mypage_btn {
+    width: 130px; height: 50px;
+    cursor: pointer;
+    border: 4px solid #22A3B2;
+    background-color: #00000000;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 16px;
+    margin-left: -25px;
+}
+/*--------------------왼쪽부터 3번 박스(메뉴버튼)--------------------*/
+
+/*----------------------------------------header----------------------------------------*/
+
+/*----------------------------------------main 사이즈----------------------------------------*/
+.container {
+    width: 100%; height: calc(100% - 250px);
+}
+/*----------------------------------------main 사이즈----------------------------------------*/
+
+/*----------------------------------------footer----------------------------------------*/
+.footer {
+    width: 100%; height: 150px;
+}
+
+.footer img {
+    width: 100%; height: 100%;
+}
+/*----------------------------------------footer----------------------------------------*/
+
+/*------------------------------------------main 페이지 내부------------------------------------------*/
+/*----------세부 페이지 버튼----------*/
+.display_section {
+    width: 100%; height: 100%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mypage_logo{
+    /* border: 1px solid red; */
+
+    width: 300px;
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    cursor: default;
+    margin: 10px;
+}
+.mypage_icon{
+    /* border: 1px solid green; */
+    width: 100px;
+    height: 100px;
+    background-image: url('/photo/mypage_icon.png');
+    background-size: cover;
+}
+.text{
+    font-size: 30px;
+    font-weight: 600;
+}
+.name_box{
+    
+    width: 400px; height: 65px;
+    border: 5px solid #117AA8;
+    background-color: #00000000;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+
+    padding: 8px;
+    margin: 20px;
+}
+
+.saved_recipe input{
+    width: 400px; height: 65px;
+    cursor: pointer;
+    border: 5px solid #22A3B2;
+    background-color: #00000000;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+
+    padding: 8px;
+    margin: 20px;
+}
+.saved_recipe input:hover{
+    background-color: #22a4b20a;
+}
+
+.written_recipe input{
+    width: 400px; height: 65px;
+    cursor: pointer;
+    border: 5px solid #22A3B2;
+    background-color: #00000000;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+
+    padding: 8px;
+    margin: 20px;
+}
+.written_recipe input:hover{
+    background-color: #22a4b20a;
+}
+/*------------------------------중앙 섹션------------------------------*/
+/*------------------------------------------main 페이지 내부------------------------------------------*/
+
